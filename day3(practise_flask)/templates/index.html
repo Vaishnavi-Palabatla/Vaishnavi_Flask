@@ -1,7 +1,11 @@
 <html>
     <body>
-        <h1> welcome {{ name }} </h1>
-        <a href="{{ url_for('logout1') }}">Click here for logout</a>
-        hello.....
+        
+        
+        {% if name == "vaish" %}
+        <h1>helloooooooooooo {{ name }} </h1>
+        {% else %}
+        <h3>you are not user</h3>
+        {% endif %}
     </body>
 </html>
