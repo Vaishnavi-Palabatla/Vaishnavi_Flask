@@ -4,16 +4,19 @@ app=Flask(__name__)
 
 @app.route("/")
 def index():
+    names=["vaishnavi","gupta","palabatla"]
+    return render_template("index.html",names=names)
     
-    return "Hello world"
+    # return "Hello world"
 
 # @app.route("/<name>")
 # def index(name):
+
 #     return render_template("index.html",name=name)
 
-@app.route("/<name>")
-def index1(name):
-    return render_template("index.html", name=name)
+# @app.route("/<name>")
+# def index1(name):
+#     return render_template("index.html", name=name)
 
 # @app.route("/logout1")
 # def logout1():

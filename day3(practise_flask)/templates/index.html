@@ -1,11 +1,9 @@
 <html>
     <body>
         
-        
-        {% if name == "vaishnavi" %}
-        <h1>helloooooooooooo {{ name }} </h1>
-        {% else %}
-        <h3>you are not user</h3>
-        {% endif %}
+       
+        {% for name in names %}
+            <li> {{ name }} </li>
+        {% endfor %}
     </body>
 </html>
