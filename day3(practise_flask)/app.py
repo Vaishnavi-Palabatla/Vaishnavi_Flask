@@ -18,9 +18,12 @@ def index():
 # def index1(name):
 #     return render_template("index.html", name=name)
 
-@app.route("/forms", methods=["POST"])
+@app.route("/forms", methods=["POST","GET"])
 def forms():
-    fname=request.form.get("fname")
-    lname=request.form.get("lname")
-    return f"{fname} {lname}"
+    if(request.method=="GET"):
+        return "login again"
+    else:
+        fname=request.form.get("fname")
+        lname=request.form.get("lname")
+        return f"{fname} {lname}"
 
