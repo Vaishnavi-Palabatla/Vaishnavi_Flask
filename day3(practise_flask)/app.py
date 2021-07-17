@@ -6,4 +6,7 @@ app=Flask(__name__)
 def index():
     return "Hello world"
 
+@app.route("/<name>")
+def index1(name):
+    return f"Hello {name}"
 
